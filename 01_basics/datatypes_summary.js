@@ -37,3 +37,27 @@ console.log(typeof myfunction)
 console.log(typeof userEmail); // undefined bcz we haven't define anything yet
 
 console.log(typeof outsidetemp);  //object 
+
+//+++++++++++++++++++++++++++++
+
+//Memory
+// Stack (Primitive) and Heap (non - primitive)
+
+let myYouTubeName = "Prince"
+
+let anotherName = myYouTubeName
+anotherName="Kumar"
+
+console.log(myYouTubeName)
+console.log(anotherName)
+
+let user = {
+    email : "krprince006@gmail.com",
+    upi : "raj@ybl"
+}
+console.log(user.email)
+
+let user2 = user
+user2.email = "razz.aryan.kr@gmail.com"
+
+console.log(user.email)
