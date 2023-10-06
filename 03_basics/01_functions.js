@@ -26,4 +26,42 @@ function loginUserMessage(username)
 }
 
 const p = loginUserMessage()
-console.log(p);
+//console.log(p);
+
+// Rest operator   ...variable name
+
+function calculateCartPrice(...num1) 
+{
+    return num1;
+}
+
+//console.log(calculateCartPrice(100,200,300));
+
+const user = {
+    username : "prince",
+    price : 200
+}
+
+function handleObject(anyObject)
+{
+    console.log(`username is ${anyObject.username} and price is ${anyObject.price}`)
+}
+
+//handleObject(user);
+
+handleObject({
+    username : "kumar",
+    price : 500
+})
+
+const myNewArray = [200,300,400,500]
+
+function returnSecondValue(getArray) 
+{
+    getArray[1]=200 //change the content of actual array
+    return  getArray[1]
+}
+
+console.log(returnSecondValue(myNewArray));
+//we can also pass array directly to functions instead of passing it through variable name
+console.log(myNewArray);
