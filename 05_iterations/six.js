@@ -35,6 +35,7 @@ const books = [
     {title : 'Book 8' , genre : 'Fiction', published : 2020, edition : 2023}
 ];
 
+//filter is a call backfuntion used to give specific result on some specific value given by user
 let userBooks = books.filter( (bk) => bk.genre==="Fiction")
  userBooks = books.filter( (bk) => bk.published >=2000 && bk.genre ==="History")
 
