@@ -1,6 +1,13 @@
 const myNums = [1,2,3,4,5,6,7,8,9,10]
 
-//reduce method is used to add all the values in arrays and we have to give starting value and the function returns a value so we have to store it 
+// It reduces all the elements of the array to a single value by repeatedly applying a function. It is an alternative of using a loop and updating the result for every scanned element. Reduce can be used in place of the following code:
+ /* 
+ arr = new Array(1, 2, 3, 6, 5, 4); 
+result = 1 
+for(let i = 0; i < 6; i++) { 
+    result = result * arr[i]; 
+} 
+ */ 
 const myTotal = myNums.reduce( function(acc,currentValue) {
     //console.log(`acc ${acc}  currentValue ${currentValue}`)
     return acc+currentValue ;
