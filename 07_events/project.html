@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+</head>
+<body>
+    <div style=" text-align: center; margin-top: 50%; ">
+     <h1 id="prince">Prince kumar</h1>
+    <button id="start" style=" border-radius: 5px; width :50px">Start</button>
+    <button id="stop" style=" border-radius: 5px; width :50px">Stop</button>
+    </div>
+</body>
+
+<script>
+    function changeColor() {
+        const hex = '123456789ABCDEF'
+        let color ='#'
+        for(i=0;i<6;i++) {
+            color += hex[Math.floor(Math.random() * 15)]
+        }
+        return color;
+    }
+    console.log(changeColor());
+    function bodyColor() {
+        document.body.style.backgroundColor =`${changeColor()}`
+    }
+
+    let intervalId;
+    document.querySelector('#start').addEventListener('click',()=> {
+         if(!intervalId)
+         intervalId = setInterval(bodyColor,100)
+    })
+
+    document.querySelector('#stop').addEventListener('click',() => {
+        clearInterval(intervalId);
+        intervalId = null;
+    })
+    
+</script>
+</html>
