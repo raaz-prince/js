@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prince </h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const changeMe = setTimeout(() => {
+        console.log("prince kumar")
+    }, 5000);
+
+    document.querySelector("#stop").addEventListener("click",()=>{
+        clearTimeout(changeMe);
+        console.log("stopped");
+    })
+
+    setInterval(()=>{
+        console.log("prince")
+    },8000)
+
+
+
+    //timeout  : run for only once after given time
+    //interval : run regualarly after a given interval
+    // clearTimeout : used to stop timeout 
+</script>
+</html>
