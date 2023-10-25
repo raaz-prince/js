@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prince</title>
+    <div class="pr"></div>
+</head>
+<body style="background-color:#212121; color :#fff ">
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/raaz-prince'
+    const xhr = new XMLHttpRequest();
+    //console.log(xhr.readyState)
+    xhr.open('GET',requestUrl)
+    //when we get response from url, in most case it is of string type so we have to convert it into json form to access it to get in object
+    let data
+    xhr.onreadystatechange =  function() {
+        console.log(xhr.readyState)
+        if (xhr.readyState === 4) {
+         data = JSON.parse(this.responseText)
+         console.log(data);
+        }
+    }
+    xhr.send()
+</script>
+</html>
