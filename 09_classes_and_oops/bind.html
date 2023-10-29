@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+
+<script>
+
+    // this is used to bind in which we get a copy of that function which can be invoked later
+    class  React {
+        constructor () {
+            this.library = "react"
+            this.server = "https://localhost:55"
+
+            document.querySelector('button').addEventListener('click',this.handleCllick.bind(this))
+        }
+
+        // requirement
+
+        handleCllick() {
+            console.log('button clicked')
+            console.log(this.server)
+        }
+    }
+    const app = new React()
+</script>
+</html>
