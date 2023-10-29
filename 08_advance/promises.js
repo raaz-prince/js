@@ -100,3 +100,11 @@ fetch('https://jsonplaceholder.typicode.com/users')
 .catch((error) => {
     console.log(TypeError)
 })
+
+// fetch api  => 
+// micro task queue or priority queue  : that's why its contain added to call stack first
+
+
+// every response that comes from network request goes into resolve() array that includes error codes also
+
+// if request doesn't caleed then that error goes into rejection() array
